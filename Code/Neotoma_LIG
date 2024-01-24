@@ -203,27 +203,27 @@ prj_dd <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 elev <- get_elev_raster(NWE.df, prj = prj_dd, z = 4, clip = "bbox")
 
 # Import ice sheet margins from Batchelor et al. (2020), available online at: https://doi.org/10.17605/OSF.IO/7JEN3
-ice_margin_MIS6 <- shapefile("/Data/Batchelor2020/MIS 6/hypothesised ice-sheet reconstructions/MIS6_best_estimate.shx")
+ice_margin_MIS6 <- shapefile("/Data/Batchelor2020/MIS6_best_estimate.shx")
 ice_margin_MIS6 <- spTransform(ice_margin_MIS6, CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 ice_margin_MIS6 = st_as_sf(ice_margin_MIS6)
 ice_margin_MIS6 = st_crop(ice_margin_MIS6, xmin=-20, xmax=20, ymin=40, ymax=60)
 
-ice_margin_MIS5c <- shapefile("/Data/Batchelor2020/MIS 5c/hypothesised ice-sheet reconstructions/MIS5c_best_estimate.shx")
+ice_margin_MIS5c <- shapefile("/Data/Batchelor2020/MIS5c_best_estimate.shx")
 ice_margin_MIS5c <- spTransform(ice_margin_MIS5c, CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 ice_margin_MIS5c = st_as_sf(ice_margin_MIS5c)
 ice_margin_MIS5c = st_crop(ice_margin_MIS5c, xmin=-20, xmax=20, ymin=40, ymax=60)
 
-ice_margin_MIS5a <- shapefile("/Data/Batchelor2020/MIS 5a/hypothesised ice-sheet reconstructions/MIS5a_best_estimate.shx")
+ice_margin_MIS5a <- shapefile("/Data/Batchelor2020/MIS5a_best_estimate.shx")
 ice_margin_MIS5a <- spTransform(ice_margin_MIS5a, CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 ice_margin_MIS5a = st_as_sf(ice_margin_MIS5a)
 ice_margin_MIS5a = st_crop(ice_margin_MIS5a, xmin=-20, xmax=20, ymin=40, ymax=60)
 
-ice_margin_MIS4 <- shapefile("/Data/Batchelor2020/MIS 4/hypothesised ice-sheet reconstructions/MIS4_best_estimate.shx")
+ice_margin_MIS4 <- shapefile("/Data/Batchelor2020/MIS4_best_estimate.shx")
 ice_margin_MIS4 <- spTransform(ice_margin_MIS4, CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 ice_margin_MIS4 = st_as_sf(ice_margin_MIS4)
 ice_margin_MIS4 = st_crop(ice_margin_MIS4, xmin=-20, xmax=20, ymin=40, ymax=60)
 
-ice_margin_LGM <- shapefile("/Data/Batchelor2020/LGM/hypothesised ice-sheet reconstruction/LGM_best_estimate.shx")
+ice_margin_LGM <- shapefile("/Data/Batchelor2020/LGM_best_estimate.shx")
 ice_margin_LGM <- spTransform(ice_margin_LGM, CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"))
 ice_margin_LGM = st_as_sf(ice_margin_LGM)
 ice_margin_LGM = st_crop(ice_margin_LGM, xmin=-20, xmax=20, ymin=40, ymax=60)
