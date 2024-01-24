@@ -1,4 +1,4 @@
-### Code to download and analyse pollen data from the Neotoma Paleoecology Database spanning the Last Interglacial in NW Europe
+### Code used to download and analyse pollen data from the Neotoma Paleoecology Database spanning the Last Interglacial in NW Europe for publication in McGuire et al. (in prep).
 ### Amy McGuire
 ### School of Earth and Environment, University of Leeds
 ### September 2023
@@ -228,8 +228,7 @@ ice_margin_LGM <- spTransform(ice_margin_LGM, CRS("+proj=longlat +ellps=WGS84 +d
 ice_margin_LGM = st_as_sf(ice_margin_LGM)
 ice_margin_LGM = st_crop(ice_margin_LGM, xmin=-20, xmax=20, ymin=40, ymax=60)
 
-
-# Import modern day shorline data from https://www.naturalearthdata.com/downloads/50m-physical-vectors/50m-coastline/
+# Import modern day shorline data from Natural Earth, available online at: https://www.naturalearthdata.com/downloads/50m-physical-vectors/50m-coastline/
 shoreline <- shapefile("/Data/ne_50m_coastline.shx")
 shoreline = st_as_sf(shoreline)
 shoreline_NWE = st_crop(shoreline, xmin=-20, xmax=20, ymin=40, ymax=60)
@@ -260,7 +259,6 @@ NWE_MIS4 <- as.data.frame(NWE_MIS4)
 NWE_LGM <- get_sites(loc = NWE$bbox, datasettype = "pollen", minage = 29000, maxage = 14000, all_data = TRUE)
 NWE_LGM <- as.data.frame(NWE_LGM)
 
-# Plot it all up
 par(mfrow=c(3,2))
 
 plot(elev, col=over.col(100))
