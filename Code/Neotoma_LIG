@@ -34,7 +34,7 @@ NWE_pollen <- readRDS("/Data/NWE_pollen_Oct23")
 
 # Read in the pollen zone data file
 
-NWE_pollen_zones <- read.csv("/Users/amy/Library/CloudStorage/OneDrive-UniversityofLeeds/Papers/05 - LIG Chron/PAZs.csv")
+NWE_pollen_zones <- read.csv("/Data/PAZs.csv")
 subset <- as.numeric(NWE_pollen_zones$Neotoma_ID)
 
 NWE_Eemian <- subset(NWE_pollen, datasetid %in% NWE_pollen_zones$Neotoma_ID)
