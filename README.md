@@ -1,5 +1,8 @@
 # McGuire_LIG
-Data files and associated code developed for the McGuire et al. (in prep) paper "Developing chronologies for Last Interglacial sequences in NW Europe".
+Data files and associated code developed for McGuire et al. (2024).
+
+Citation:
+McGuire, A.M., Waajen, I.M. and Barlow, N.L.M. (2024), Advancing chronologies for Last Interglacial sequences. J. Quaternary Sci. https://doi.org/10.1002/jqs.3641
 
 ## Data
 Contains the following files:
